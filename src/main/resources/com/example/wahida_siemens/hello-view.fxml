@@ -5,12 +5,19 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.wahida_siemens.HelloController">
+      fx:controller="com.example.wahida_siemens.HomeController"
+      stylesheets="@style.css">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
   </padding>
-
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+  <HBox alignment="CENTER" spacing="10.0">
+  </HBox>
+  <Label text="SIEMENS" styleClass="title"/>
+  <Label text="Füge einen Satz ein, wie z.B.: 'Coco (mein Kater) und ich lieben Siemens *-*'" />
+  <TextField fx:id="input" promptText="Schreibe einen Satz"/>
+  <Button text="Umkehren" onAction="#reverseBtnClick"/>
+  <Label fx:id="output" textAlignment="CENTER"/>
 </VBox>
